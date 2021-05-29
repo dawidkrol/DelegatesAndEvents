@@ -6,13 +6,18 @@ namespace DelegatesAndEvents
 {
     class Program
     {
+        delegate void Del(int a);
         static void Main(string[] args)
         {
             //Console.WriteLine(Counting.PayDay(GetEmployees(), Message, Discount));
-            //Console.WriteLine();
+
             //Console.WriteLine($"Cost after discount {Counting.PayDay(GetEmployees(), (x) =>Console.WriteLine($"Full cost {x:C2}"), Discount):C2}");
 
-            Console.WriteLine($"Sum of employees {Counting.Employees(GetEmployees(),Message)}");
+            //Console.WriteLine($"Sum of employees {Counting.Employees(GetEmployees(),Message)}");
+
+            Del e = Message;
+            e += Mess;
+            e(15);
         }
 
         public static List<Employee> GetEmployees()
@@ -29,6 +34,11 @@ namespace DelegatesAndEvents
         public static void Message<T>(T mess)
         {
             Console.WriteLine(mess);
+        }
+
+        public static void Mess(int a)
+        {
+            Console.WriteLine($"Mess: {a}");
         }
 
         public static decimal Discount(int number, decimal cost)

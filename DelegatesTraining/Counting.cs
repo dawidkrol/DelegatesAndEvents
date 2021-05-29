@@ -18,12 +18,12 @@ namespace DelegatesTraining
 
             return output;
         }
-        public static int Employees(List<Employee> employees,Action<string> e)
+        public static int Employees(List<Employee> employees,Action<Employee> e)
         {
             int output = 0;
             foreach (var employee in employees)
             {
-                e($"{employee.Name} {employee.SurName} {employee.Paymant:C2}");
+                e(employee);
                 output++;
             }
             return output;
