@@ -9,7 +9,10 @@ namespace DelegatesAndEvents
         static void Main(string[] args)
         {
             //Console.WriteLine(Counting.PayDay(GetEmployees(), Message, Discount));
-            Console.WriteLine($"Cost after discount {Counting.PayDay(GetEmployees(), (x) =>Console.WriteLine($"Full cost {x:C2}"), Discount):C2}");
+            //Console.WriteLine();
+            //Console.WriteLine($"Cost after discount {Counting.PayDay(GetEmployees(), (x) =>Console.WriteLine($"Full cost {x:C2}"), Discount):C2}");
+
+            Console.WriteLine($"Sum of employees {Counting.Employees(GetEmployees(),Message)}");
         }
 
         public static List<Employee> GetEmployees()
@@ -23,7 +26,7 @@ namespace DelegatesAndEvents
             return output;
         }
 
-        public static void Message(decimal mess)
+        public static void Message<T>(T mess)
         {
             Console.WriteLine(mess);
         }
