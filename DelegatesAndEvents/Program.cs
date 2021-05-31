@@ -1,4 +1,5 @@
 ﻿using DelegatesTraining;
+using EventsTraining;
 using System;
 using System.Collections.Generic;
 
@@ -15,9 +16,17 @@ namespace DelegatesAndEvents
 
             //Console.WriteLine($"Sum of employees {Counting.Employees(GetEmployees(),Message)}");
 
-            Del e = Message;
-            e += Mess;
-            e(15);
+            //Del e = Message;
+            //e += Mess;
+            //e(15);
+            Item item = new Item { name = "Car", price = 50_000 };
+            item.PriceChanged += Item_PriceChanged;
+            item.price = 20_000;
+        }
+
+        private static void Item_PriceChanged(object sender, PriceChangedEventArgs e)
+        {
+            Console.WriteLine($"Old price: {e.OldPrice:C2} \nNew price: {e.NewPrice:C2}");
         }
 
         public static List<Employee> GetEmployees()

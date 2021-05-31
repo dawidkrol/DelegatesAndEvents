@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DelegatesTraining\DelegatesTraining.csproj" />
+    <ProjectReference Include="..\EventsTraining\EventsTraining.csproj" />
   </ItemGroup>
 
 </Project>
