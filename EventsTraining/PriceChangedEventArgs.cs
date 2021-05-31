@@ -8,8 +8,8 @@ namespace EventsTraining
 {
     public class PriceChangedEventArgs : EventArgs
     {
-        public readonly decimal NewPrice;
-        public readonly decimal OldPrice;
+        public decimal NewPrice { get; private set; }
+        public decimal OldPrice { get; private set; }
         public PriceChangedEventArgs(decimal newPrice, decimal oldPrice)
         {
             NewPrice = newPrice;

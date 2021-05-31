@@ -19,14 +19,17 @@ namespace DelegatesAndEvents
             //Del e = Message;
             //e += Mess;
             //e(15);
-            Item item = new Item { name = "Car", price = 50_000 };
-            item.PriceChanged += Item_PriceChanged;
+
+            Item item = new Item { Name = "Car", price = 50_000 };
+            Item item2 = new Item { Name = "Cat", price = 10 };
+            Item.PriceChanged += Item_PriceChanged;
             item.price = 20_000;
+            item2.price = 5;
         }
 
         private static void Item_PriceChanged(object sender, PriceChangedEventArgs e)
         {
-            Console.WriteLine($"Old price: {e.OldPrice:C2} \nNew price: {e.NewPrice:C2}");
+            Console.WriteLine($"Price update\nOld price: {e.OldPrice:C2} \nNew price: {e.NewPrice:C2}");
         }
 
         public static List<Employee> GetEmployees()

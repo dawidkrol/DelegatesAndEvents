@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventsTraining
 {
     public class Item
     {
-        public event EventHandler<PriceChangedEventArgs> PriceChanged;
-        public string name { get; set; }
+        public static event EventHandler<PriceChangedEventArgs> PriceChanged;
+        public string Name { get; set; }
         private decimal _price;
-        public decimal price 
-        { 
+        public decimal price
+        {
             get
             {
                 return _price;
@@ -20,7 +16,8 @@ namespace EventsTraining
             set
             {
                 if (_price == value) return;
-                OnPriceChanged(new PriceChangedEventArgs(_price, value));
+                PriceChangedEventArgs price = new PriceChangedEventArgs(value, _price);
+                OnPriceChanged(price);
                 _price = value;
             }
         }
