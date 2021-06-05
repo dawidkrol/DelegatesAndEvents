@@ -36,6 +36,7 @@ namespace DelegatesAndEvents
             EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15);
             item.PropertyChanged += Item_PropertyChanged;
             item.price = 10.1M;
+            Console.WriteLine(item.name);
         }
 
         private static void Item_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -10,11 +10,17 @@ namespace EventsTraining.Version2
 {
     public class Item : INotifyPropertyChanged
     {
-        public Item(decimal price)
+        //public Item(decimal price)
+        //{
+        //    this.price = price;
+        //}
+        public Item(decimal price,[CallerMemberName]string name = null) //: this(price)
         {
             this.price = price;
+            this.name = name;
         }
         public event PropertyChangedEventHandler PropertyChanged;
+        public string name { get; set; }
         private decimal _price;
         public decimal price
         {
