@@ -28,6 +28,7 @@ namespace EventsTraining.Version2
                 _price = value;
             }
         }
+        //Important [CallerMemberName]
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
