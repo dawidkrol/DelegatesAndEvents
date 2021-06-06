@@ -7,21 +7,50 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace EventsTraining.Version2
-{
+{   
+    /// <summary>
+    /// Item to sale
+    /// </summary>
     public class Item : INotifyPropertyChanged
     {
         //public Item(decimal price)
         //{
         //    this.price = price;
         //}
-        public Item(decimal price,[CallerMemberName]string name = null) //: this(price)
+        /// <summary>
+        /// Constructor which has dwo arguments 
+        /// </summary>
+        /// <param name="price">Item`s price</param>
+        /// <param name="name">Name of item</param>
+        public Item(decimal price,string name) //: this(price)
         {
             this.price = price;
-            this.name = name;
+            _name = name;
         }
+        /// <summary>
+        /// Zmiana własności obiektu
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-        public string name { get; set; }
+        private string _name;
+        /// <summary>
+        /// Item`s name
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnPropertyChanged();
+                _name = value;
+            }
+        }
         private decimal _price;
+        /// <summary>
+        /// Item`s price in decimal
+        /// </summary>
         public decimal price
         {
             get
@@ -35,6 +64,10 @@ namespace EventsTraining.Version2
             }
         }
         //Important [CallerMemberName]
+        /// <summary>
+        /// Wywołanie zdarzenia
+        /// </summary>
+        /// <param name="propertyName">Name of caller (defaulty knowny by CallerMemberName arttribute)</param>
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));

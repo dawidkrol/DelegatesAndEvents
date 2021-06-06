@@ -33,10 +33,11 @@ namespace DelegatesAndEvents
             //Func<int, int> sqr = (x) => x * x;
             //Console.WriteLine(sqr(3));
 
-            EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15);
+            EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15,"Apple");
             item.PropertyChanged += Item_PropertyChanged;
             item.price = 10.1M;
-            Console.WriteLine(item.name);
+            Console.WriteLine(item.Name);
+            item.Name = "Name";
         }
 
         private static void Item_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -44,10 +45,7 @@ namespace DelegatesAndEvents
             Console.WriteLine($"{e.PropertyName} had changed");
         }
 
-        private static void Item_PriceEvent(object sender, decimal e)
-        {
-            Console.WriteLine("Throwing price");
-        }
+        private static void Item_PriceEvent(object sender, decimal e) => Console.WriteLine("Throwing price");
 
         private static void Item_PriceChanged(object sender, PriceChangedEventArgs e)
         {

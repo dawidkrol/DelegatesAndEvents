@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EventsTraining</name>
+    </assembly>
+    <members>
+        <member name="T:EventsTraining.Version2.Item">
+            <summary>
+            Item to sale
+            </summary>
+        </member>
+        <member name="M:EventsTraining.Version2.Item.#ctor(System.Decimal,System.String)">
+            <summary>
+            Constructor which has dwo arguments 
+            </summary>
+            <param name="price">Item`s price</param>
+            <param name="name">Name of item</param>
+        </member>
+        <member name="E:EventsTraining.Version2.Item.PropertyChanged">
+            <summary>
+            Zmiana własności obiektu
+            </summary>
+        </member>
+        <member name="P:EventsTraining.Version2.Item.Name">
+            <summary>
+            Item`s name
+            </summary>
+        </member>
+        <member name="P:EventsTraining.Version2.Item.price">
+            <summary>
+            Item`s price in decimal
+            </summary>
+        </member>
+        <member name="M:EventsTraining.Version2.Item.OnPropertyChanged(System.String)">
+            <summary>
+            Wywołanie zdarzenia
+            </summary>
+            <param name="propertyName">Name of caller (defaulty knowny by CallerMemberName arttribute)</param>
+        </member>
+    </members>
+</doc>
