@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace EventsTraining
 {
+#pragma warning disable CS1591
     public class Item
     {
         public static event EventHandler<PriceChangedEventArgs> PriceChanged;

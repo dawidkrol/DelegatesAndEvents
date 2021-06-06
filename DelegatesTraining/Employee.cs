@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DelegatesTraining
 {
+#pragma warning disable CS1591
     public class Employee
     {
         public string Name { get; set; }

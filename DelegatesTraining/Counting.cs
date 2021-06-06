@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace DelegatesTraining
 {
+#pragma warning disable CS1591
     public class Counting
     {
         /// <summary>

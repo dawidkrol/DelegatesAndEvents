@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventsTraining
 {
+#pragma warning disable CS1591
     public class PriceChangedEventArgs : EventArgs
     {
         public decimal NewPrice { get; private set; }
