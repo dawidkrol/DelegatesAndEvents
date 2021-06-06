@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DelegatesTraining</name>
+    </assembly>
+    <members>
+        <member name="M:DelegatesTraining.Counting.PayDay(System.Collections.Generic.List{DelegatesTraining.Employee},System.Action{System.Decimal},System.Func{System.Int32,System.Decimal,System.Decimal})">
+            <summary>
+            Counting how much monay you need on payday
+            </summary>
+            <param name="employees">List of employees</param>
+            <param name="action">Delegate showing full cost</param>
+            <param name="func">Delegate which is counting actual cost</param>
+            <returns>Employees cost after special counting</returns>
+        </member>
+        <member name="M:DelegatesTraining.Counting.Employees(System.Collections.Generic.List{DelegatesTraining.Employee},System.Action{DelegatesTraining.Employee})">
+            <summary>
+            Counting eployees
+            </summary>
+            <param name="employees">List of employees</param>
+            <param name="e">Delegate, which is showing employees</param>
+            <returns>Number of employees</returns>
+        </member>
+    </members>
+</doc>

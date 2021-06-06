@@ -35,7 +35,7 @@
             <summary>
             Wywołanie zdarzenia
             </summary>
-            <param name="propertyName">Name of caller (defaulty knowny by CallerMemberName arttribute)</param>
+            <param name="propertyName">Name of caller (defaulty known by CallerMemberName arttribute)</param>
         </member>
     </members>
 </doc>
