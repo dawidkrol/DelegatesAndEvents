@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesAndEvents", "Deleg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesTraining", "DelegatesTraining\DelegatesTraining.csproj", "{6A908DA0-B74F-49D0-8441-A8DA33EBA89D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsTraining", "EventsTraining\EventsTraining.csproj", "{5EBF8C8E-54BA-4BE6-AD62-10C16DDB26CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsTraining", "EventsTraining\EventsTraining.csproj", "{5EBF8C8E-54BA-4BE6-AD62-10C16DDB26CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj", "{7A26360D-C937-4668-9153-9C9D148DCC4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5EBF8C8E-54BA-4BE6-AD62-10C16DDB26CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EBF8C8E-54BA-4BE6-AD62-10C16DDB26CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EBF8C8E-54BA-4BE6-AD62-10C16DDB26CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A26360D-C937-4668-9153-9C9D148DCC4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A26360D-C937-4668-9153-9C9D148DCC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A26360D-C937-4668-9153-9C9D148DCC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A26360D-C937-4668-9153-9C9D148DCC4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

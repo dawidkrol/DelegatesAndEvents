@@ -3,6 +3,9 @@ using EventsTraining;
 using System;
 using System.Collections.Generic;
 using EventsTraining.Version2;
+using Async;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace DelegatesAndEvents
 {
@@ -33,16 +36,31 @@ namespace DelegatesAndEvents
             //Func<int, int> sqr = (x) => x * x;
             //Console.WriteLine(sqr(3));
 
-            EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15,"Apple");
-            item.PropertyChanged += Item_PropertyChanged;
-            item.price = 10.1M;
-            Console.WriteLine(item.Name);
-            item.Name = "Name";
+            //EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15,"Apple");
+            //item.PropertyChanged += Item_PropertyChanged;
+            //item.price = 10.1M;
+            //Console.WriteLine(item.Name);
+            //item.Name = "Name";
+
+            Progress<int> progress = new Progress<int>();
+            progress.ProgressChanged += Progress_ProgressChanged;
+
+            Task.Run(() => AsyncTraining.zadanie(progress));
+            foreach(var letter in "wqeriroegjioegj")
+            {
+                Console.WriteLine(letter);
+                Thread.Sleep(100);
+            }
+        }
+
+        private static void Progress_ProgressChanged(object sender, int e)
+        {
+            Console.WriteLine(e.ToString());
         }
 
         private static void Item_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            Console.WriteLine($"{e.PropertyName} had changed");
+            Console.WriteLine($"{e.PropertyName} has changed");
         }
 
         private static void Item_PriceEvent(object sender, decimal e) => Console.WriteLine("Throwing price");
