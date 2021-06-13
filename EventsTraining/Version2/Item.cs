@@ -11,7 +11,7 @@ namespace EventsTraining.Version2
     /// <summary>
     /// Item to sale
     /// </summary>
-    public class Item : INotifyPropertyChanged
+    public class Item : INotifyPropertyChanged,IEquatable<Item>
     {
         //public Item(decimal price)
         //{
@@ -71,6 +71,23 @@ namespace EventsTraining.Version2
         protected virtual void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
+        }
+    /// <summary>
+    /// overwriting Equals method
+    /// </summary>
+    /// <param name="other"></param>
+    /// <returns>bool</returns>
+        public bool Equals(Item other)
+        {
+            if(_name == other._name)
+            {
+                return true;
+            }
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            return _name.GetHashCode() * 37;
         }
     }
 }
