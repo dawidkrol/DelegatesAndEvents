@@ -42,15 +42,17 @@ namespace DelegatesAndEvents
             //Console.WriteLine(item.Name);
             //item.Name = "Name";
 
-            Progress<int> progress = new Progress<int>();
-            progress.ProgressChanged += Progress_ProgressChanged;
+            //Progress<int> progress = new Progress<int>();
+            //progress.ProgressChanged += Progress_ProgressChanged;
 
-            Task.Run(() => AsyncTraining.zadanie(progress));
-            foreach(var letter in "wqeriroegjioegj")
-            {
-                Console.WriteLine(letter);
-                Thread.Sleep(100);
-            }
+            //Task.Run(() => AsyncTraining.zadanie(progress));
+            //foreach(var letter in "wqeriroegjioegj")
+            //{
+            //    Console.WriteLine(letter);
+            //    Thread.Sleep(100);
+            //}
+
+           
         }
 
         private static void Progress_ProgressChanged(object sender, int e)

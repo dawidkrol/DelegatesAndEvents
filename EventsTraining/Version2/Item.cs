@@ -11,7 +11,7 @@ namespace EventsTraining.Version2
     /// <summary>
     /// Item to sale
     /// </summary>
-    public class Item : INotifyPropertyChanged,IEquatable<Item>
+    public class Item : INotifyPropertyChanged, IEquatable<Item>, IComparable<Item>
     {
         //public Item(decimal price)
         //{
@@ -85,9 +85,33 @@ namespace EventsTraining.Version2
             }
             return false;
         }
+        /// <summary>
+        /// Overriding GetHashCode()
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return _name.GetHashCode() * 37;
+        }
+        /// <summary>
+        /// Overriding CompareTo
+        /// </summary>
+        /// <param name="other">Compared object</param>
+        /// <returns></returns>
+        public int CompareTo(Item other)
+        {
+            if (price > other.price)
+            {
+                return 1;
+            }
+            else if (price == other.price)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
