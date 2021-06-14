@@ -52,7 +52,15 @@ namespace DelegatesAndEvents
             //    Thread.Sleep(100);
             //}
 
-           
+            //EventsTraining.Version2.Item item = new EventsTraining.Version2.Item(15, "Apple");
+            //EventsTraining.Version2.Item item2 = new EventsTraining.Version2.Item(16, "Egg");
+            //Console.WriteLine(item.Equals(item2));
+            ////Console.WriteLine(item.Equals(new object()));
+
+            //Console.WriteLine(item.CompareTo(item2));
+            ////Console.WriteLine(item.CompareTo(new object()));
+
+
         }
 
         private static void Progress_ProgressChanged(object sender, int e)

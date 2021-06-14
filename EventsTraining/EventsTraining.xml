@@ -37,5 +37,25 @@
             </summary>
             <param name="propertyName">Name of caller (defaulty knowny by CallerMemberName arttribute)</param>
         </member>
+        <member name="M:EventsTraining.Version2.Item.Equals(EventsTraining.Version2.Item)">
+            <summary>
+            overwriting Equals method
+            </summary>
+            <param name="other"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:EventsTraining.Version2.Item.GetHashCode">
+            <summary>
+            Overriding GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EventsTraining.Version2.Item.CompareTo(EventsTraining.Version2.Item)">
+            <summary>
+            Overriding CompareTo
+            </summary>
+            <param name="other">Compared object</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

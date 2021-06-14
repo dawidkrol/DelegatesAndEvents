@@ -11,7 +11,7 @@ namespace EventsTraining.Version2
     /// <summary>
     /// Item to sale
     /// </summary>
-    public class Item : INotifyPropertyChanged, IEquatable<Item>, IComparable<Item>
+    public class Item : INotifyPropertyChanged, IEquatable<Item>, IComparable<Item>,IComparable
     {
         //public Item(decimal price)
         //{
@@ -112,6 +112,24 @@ namespace EventsTraining.Version2
             {
                 return -1;
             }
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj is Item s)
+            {
+                CompareTo(s);
+            }
+            throw new ArgumentException("To nie jest Item");
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Item s)
+            {
+                Equals(s);
+            }
+            throw new ArgumentException("To nie jest Item");
         }
     }
 }
